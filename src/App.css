@@ -4,6 +4,19 @@
   padding: 2rem;
   text-align: center;
 }
+.hire-cta-wrapper {
+  margin-top: 16px; /* small gap from previous buttons */
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.runaway-btn {
+  transition: transform 0.2s ease;
+  cursor: not-allowed;
+}
 
 .logo {
   height: 6em;

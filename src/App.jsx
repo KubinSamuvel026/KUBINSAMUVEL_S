@@ -198,55 +198,82 @@ const OverflowDebugger = ({ enabled }) => {
 
 // Home Page
 const HomePage = () => {
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+
+  const moveButton = () => {
+    const radius = 300; // small movement radius
+    const x = (Math.random() * 2 - 1) * radius;
+    const y = (Math.random() * 2 - 1) * radius;
+    setOffset({ x, y });
+  };
+
   return (
     <div className="home-container">
       <div className="home-gradient-bg" />
+
       <div className="home-particles">
         {[...Array(50)].map((_, i) => (
           <div
             key={i}
             className="particle"
             style={{
-              width: Math.random() * 4 + 1 + 'px',
-              height: Math.random() * 4 + 1 + 'px',
-              top: Math.random() * 100 + '%',
-              left: Math.random() * 100 + '%',
+              width: Math.random() * 4 + 1 + "px",
+              height: Math.random() * 4 + 1 + "px",
+              top: Math.random() * 100 + "%",
+              left: Math.random() * 100 + "%",
               animation: `float ${Math.random() * 10 + 10}s infinite ease-in-out`,
             }}
           />
         ))}
       </div>
-      
+
       <div className="home-content">
-        <h1 className="home-title">
-          Kubinsamuvel
-        </h1>
+        {/* ===== ORIGINAL CONTENT (UNCHANGED) ===== */}
+        <h1 className="home-title">Kubinsamuvel</h1>
+
         <p className="home-subtitle">
           Python Full-Stack Developer building scalable, clean, and impactful web applications
         </p>
+
         <p className="home-description">
           Focused on performance, modern UI, and real-world problem solving
         </p>
+
         <div className="home-cta-group">
-          <Link
-            to="/projects"
-            className="btn btn-primary"
-          >
+          <Link to="/projects" className="btn btn-primary">
             <span className="btn-text">View Projects</span>
             <span className="btn-ripple"></span>
           </Link>
-          <Link
-            to="/contact"
-            className="btn btn-secondary"
-          >
+
+          <Link to="/contact" className="btn btn-secondary">
             <span className="btn-text">Contact Me</span>
             <span className="btn-ripple"></span>
           </Link>
+        </div>
+
+        {/* ===== NEW BUTTONS (ADDED ONLY) ===== */}
+        <div className="hire-cta-wrapper mt-8">
+          <a href="/KUBIN_SAMUVEL_resume.pdf" download className="btn btn-primary mr-4">
+            Hire Me
+          </a>
+
+          <button
+            className="btn btn-secondary runaway-btn "
+            onMouseEnter={moveButton}
+            style={{
+              transform: `translate(${offset.x}px, ${offset.y}px)`,
+            }}
+          >
+            Not Hire Me
+          </button>
         </div>
       </div>
     </div>
   );
 };
+
+
+
 
 // About Page
 const AboutPage = () => {
