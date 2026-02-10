@@ -166,7 +166,7 @@ const Footer = () => {
   );
 };
 
-// Debug: Temporary overflow detector for Home and Contact pages
+
 const OverflowDebugger = ({ enabled }) => {
   useEffect(() => {
     if (!enabled) return;
@@ -176,15 +176,6 @@ const OverflowDebugger = ({ enabled }) => {
       return r.right > (window.innerWidth - 1);
     });
 
-    if (overflowEls.length) {
-      console.log('Detected overflowing elements:', overflowEls);
-      overflowEls.forEach((el) => {
-        el.__origOutline = el.style.outline;
-        el.style.outline = '2px solid rgba(38, 37, 37, 0.9)';
-      });
-    } else {
-      console.log('No overflowing elements detected.');
-    }
 
     return () => {
       overflowEls.forEach((el) => {
