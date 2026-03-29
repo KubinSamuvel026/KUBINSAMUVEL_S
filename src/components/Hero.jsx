@@ -100,7 +100,7 @@ export function Hero() {
 
             <div className="inline-flex items-center gap-2 rounded-full border border-[rgb(var(--border))] bg-white/60 px-3 py-1 text-xs font-semibold text-[rgb(var(--muted))] backdrop-blur dark:bg-white/5">
               <span className="h-1.5 w-1.5 rounded-full bg-[rgb(var(--accent))]" />
-              Premium · Modern · Retro
+              Modern · Interactive · Fast
             </div>
 
             <h1 className="mt-5 font-[Poppins] text-4xl font-extrabold tracking-tight sm:text-5xl">
@@ -180,9 +180,9 @@ export function Hero() {
               </div>
 
               <div className="mt-6 rounded-2xl border border-[rgb(var(--border))] bg-white/70 p-4 backdrop-blur dark:bg-white/5">
-                <div className="text-xs font-semibold text-[rgb(var(--muted))]">Signature</div>
+                <div className="text-xs font-semibold text-[rgb(var(--muted))]">Focus</div>
                 <div className="mt-1 font-[Poppins] text-base font-semibold">
-                  Premium light theme + subtle retro glow
+                  Scalable APIs + polished user experience
                 </div>
                 <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-black/5 dark:bg-white/10">
                   <div className="h-full w-[78%] rounded-full bg-gradient-to-r from-[rgb(var(--accent))] via-[rgb(var(--accent2))] to-[rgb(var(--accent3))]" />

@@ -1,22 +1,37 @@
 import { motion } from "framer-motion";
+import { Braces, Database, Layers, Rocket } from "lucide-react";
 import profileImg from "../kubin.jpeg";
-import { profile } from "../data/profile";
 import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
 import { Section } from "./Section";
 
-function Highlight({ children }) {
-  return (
-    <span className="rounded-md bg-[rgba(var(--accent2),0.12)] px-1.5 py-0.5 font-semibold text-[rgb(var(--text))]">
-      {children}
-    </span>
-  );
-}
+const CARDS = [
+  {
+    icon: Database,
+    title: "Backend APIs",
+    desc: "Designing robust REST APIs and scalable backend services.",
+  },
+  {
+    icon: Layers,
+    title: "Database & Performance",
+    desc: "Query optimization, data modeling, and systems that stay fast.",
+  },
+  {
+    icon: Braces,
+    title: "Frontend Delivery",
+    desc: "Modern React UI that feels clean, responsive, and polished.",
+  },
+  {
+    icon: Rocket,
+    title: "Architecture",
+    desc: "Maintainable codebases with clear structure and solid patterns.",
+  },
+];
 
 export function About() {
   const reduced = usePrefersReducedMotion();
 
   return (
-    <Section id="about" eyebrow="About" title="Crafting scalable systems with polished UX">
+    <Section id="about" eyebrow="What I do" title="Capabilities at a glance">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <motion.div
           initial={reduced ? false : { opacity: 0, y: 14 }}
@@ -26,34 +41,30 @@ export function About() {
           className="glass rounded-3xl p-7 sm:p-9"
         >
           <p className="text-[rgb(var(--muted))] leading-relaxed">
-            {profile.about
-              .replaceAll("scalable", "__SCALABLE__")
-              .replaceAll("APIs", "__APIS__")
-              .replaceAll("performance", "__PERFORMANCE__")
-              .split(/(__SCALABLE__|__APIS__|__PERFORMANCE__)/g)
-              .map((chunk, i) => {
-                if (chunk === "__SCALABLE__") return <Highlight key={i}>scalable</Highlight>;
-                if (chunk === "__APIS__") return <Highlight key={i}>APIs</Highlight>;
-                if (chunk === "__PERFORMANCE__") return <Highlight key={i}>performance</Highlight>;
-                return <span key={i}>{chunk}</span>;
-              })}
+            I build scalable web applications with strong backend foundations and modern frontend execution.
+            The focus is always on clean architecture, performance, and practical value.
           </p>
 
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            {[
-              { t: "Scalable", d: "Architecture & APIs" },
-              { t: "Clean", d: "Maintainable code" },
-              { t: "Fast", d: "Performance-first" },
-              { t: "Modern", d: "UI craft" },
-            ].map((c) => (
-              <div
-                key={c.t}
-                className="rounded-2xl border border-[rgb(var(--border))] bg-white/70 p-4 backdrop-blur dark:bg-white/5"
-              >
-                <div className="font-[Poppins] text-sm font-semibold">{c.t}</div>
-                <div className="mt-1 text-xs text-[rgb(var(--muted))]">{c.d}</div>
-              </div>
-            ))}
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {CARDS.map((c) => {
+              const Icon = c.icon;
+              return (
+                <div
+                  key={c.title}
+                  className="group rounded-2xl border border-[rgb(var(--border))] bg-white/70 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[var(--shadow2)] dark:bg-white/5"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[rgba(var(--accent),0.18)] via-[rgba(var(--accent2),0.12)] to-[rgba(var(--accent3),0.12)]">
+                      <Icon size={18} />
+                    </span>
+                    <div className="min-w-0">
+                      <div className="font-[Poppins] text-sm font-semibold">{c.title}</div>
+                      <div className="mt-1 text-xs text-[rgb(var(--muted))]">{c.desc}</div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 
