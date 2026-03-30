@@ -62,6 +62,16 @@ export const projects = [
     github: "#",
   },
   {
+    id: "drivewell-driving-school",
+    title: "Drivewell Driving School",
+    category: "Frontend",
+    description:
+      "A modern driving school website built with React that showcases courses, services, and contact information through an interactive and responsive user interface.",
+    tech: ["React", "JavaScript", "HTML5", "CSS3"],
+    live: "https://drivewell-five.vercel.app/",
+    github: "https://github.com/KubinSamuvel026/Drivewell-",
+  },
+  {
     id: "movie-search-app",
     title: "Movie Search App",
     category: "Frontend",
