@@ -14,7 +14,6 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Academics from "./pages/Academics";
-import Certificates from "./pages/Certificates";
 import Contact from "./pages/Contact";
 
 function ScrollToTop() {
@@ -52,7 +51,6 @@ function AppShell() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/academics" element={<Academics />} />
-          {/* <Route path="/certificates" element={<Certificates />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
         </Routes>
