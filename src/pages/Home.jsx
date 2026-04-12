@@ -61,7 +61,14 @@ const FEATURED = projects.filter(p => p.featured).slice(0, 4);
 export default function Home() {
   const typed = useTypingText(profile.role, { speedMs: 38, startDelayMs: 320 });
   const reduced = usePrefersReducedMotion();
-
+const downloadResume = () => {
+  const link = document.createElement("a");
+  link.href = "/kubinresume.pdf";
+  link.download = "Kubin_Samuel_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
   return (
     <div className="page-enter">
       {/* ── Hero ── */}
@@ -102,10 +109,10 @@ export default function Home() {
                   className="focus-ring ripple inline-flex items-center gap-2 rounded-2xl border border-[rgb(var(--border))] bg-white/60 px-5 py-3 text-sm font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/80 dark:bg-white/5 dark:hover:bg-white/10">
                   Read Blog <BookOpen size={16} />
                 </Link>
-                <a href={profile.contact.resumePath} download onMouseMove={attachRippleVars}
+                <button onClick={downloadResume} onMouseMove={attachRippleVars}
                   className="focus-ring ripple inline-flex items-center gap-2 rounded-2xl border border-[rgb(var(--border))] bg-white/60 px-5 py-3 text-sm font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/80 dark:bg-white/5 dark:hover:bg-white/10">
                   Resume <Download size={16} />
-                </a>
+                </button>
               </div>
             </motion.div>
           </div>

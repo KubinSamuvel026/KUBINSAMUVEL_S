@@ -5,7 +5,7 @@ export const profile = {
   bio: "I'm a Python Full Stack Developer with a passion for building robust backend systems and modern frontend interfaces. Trained at QSpiders, I specialize in clean architecture, RESTful APIs, and delivering practical value through technology.",
   contact: {
     email: "kubinsamuvel@gmail.com",
-    phone: "+91 98765 43210",
+    phone: "+91 6374143168",
     github: "https://github.com/kubinsamuvel",
     linkedin: "https://linkedin.com/in/kubinsamuvel",
     resumePath: "/kubinresume.pdf",
