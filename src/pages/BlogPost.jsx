@@ -1,8 +1,8 @@
 import { ArrowLeft, BookOpen, Clock } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { blogTopics, blogCategories } from "../data/blog";
-import { usePrefersReducedMotion } from "../hooks";
+import { blogTopics, blogCategories } from "../data/blog.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 function CodeBlock({ code }) {
   return (

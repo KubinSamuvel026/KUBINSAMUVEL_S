@@ -1,20 +1,20 @@
 import { useMemo, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
-import { CustomCursor } from "./components/CustomCursor";
-import { ScrollProgress } from "./components/ScrollProgress";
-import { useTheme } from "./hooks";
-import { attachRippleVars } from "./lib/dom";
+import { Navbar } from "./components/Navbar.jsx";
+import { Footer } from "./components/Footer.jsx";
+import { CustomCursor } from "./components/CustomCursor.jsx";
+import { ScrollProgress } from "./components/ScrollProgress.jsx";
+import { useTheme } from "./hooks/index.js";
+import { attachRippleVars } from "./lib/dom.js";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import ProjectDetail from "./pages/ProjectDetail";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import Academics from "./pages/Academics";
-import Contact from "./pages/Contact";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Projects from "./pages/Projects.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
+import Blog from "./pages/Blog.jsx";
+import BlogPost from "./pages/BlogPost.jsx";
+import Academics from "./pages/Academics.jsx";
+import Contact from "./pages/Contact.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();

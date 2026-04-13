@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { useEffect, useRef } from "react";
-import { profile } from "../data/profile";
-import { attachRippleVars, scrollToId } from "../lib/dom";
-import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
-import { useTypingText } from "../hooks/useTypingText";
+import { profile } from "../data/profile.js";
+import { attachRippleVars, scrollToId } from "../lib/dom.js";
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion.js";
+import { useTypingText } from "../hooks/useTypingText.js";
 
 function Particles() {
   const reduced = usePrefersReducedMotion();

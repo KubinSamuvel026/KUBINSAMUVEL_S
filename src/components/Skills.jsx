@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Code2, Database, Layout } from "lucide-react";
-import { skills } from "../data/profile";
-import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
-import { Section } from "./Section";
+import { skills } from "../data/profile.js";
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion.js";
+import { Section } from "./Section.jsx";
 
 function Meter({ label, value }) {
   const reduced = usePrefersReducedMotion();

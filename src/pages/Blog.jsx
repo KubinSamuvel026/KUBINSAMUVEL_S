@@ -2,10 +2,10 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Search, BookOpen, ChevronRight } from "lucide-react";
-import { Section } from "../components/Section";
-import { blogCategories, blogTopics } from "../data/blog";
-import { attachRippleVars } from "../lib/dom";
-import { usePrefersReducedMotion } from "../hooks";
+import { Section } from "../components/Section.jsx";
+import { blogCategories, blogTopics } from "../data/blog.js";
+import { attachRippleVars } from "../lib/dom.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 const LEVELS = ["All", "Beginner", "Intermediate", "Advanced"];
 const LEVEL_COLORS = {

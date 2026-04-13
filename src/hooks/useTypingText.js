@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+import { usePrefersReducedMotion } from "./usePrefersReducedMotion.js";
 
 export function useTypingText(text, { speedMs = 42, startDelayMs = 250 } = {}) {
   const reduced = usePrefersReducedMotion();

@@ -1,8 +1,8 @@
 import { ArrowLeft, Calendar, ExternalLink, Github, Layers } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { projects } from "../data/profile";
-import { usePrefersReducedMotion } from "../hooks";
+import { projects } from "../data/profile.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 export default function ProjectDetail() {
   const { id } = useParams();

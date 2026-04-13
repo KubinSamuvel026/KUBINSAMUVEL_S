@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, Code2, Database, Download, Layout, Mail, Rocket } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { profile, projects, skills } from "../data/profile";
-import { attachRippleVars } from "../lib/dom";
-import { usePrefersReducedMotion, useTypingText } from "../hooks";
+import { profile, projects, skills } from "../data/profile.js";
+import { attachRippleVars } from "../lib/dom.js";
+import { usePrefersReducedMotion, useTypingText } from "../hooks/index.js";
 
 function Particles() {
   const reduced = usePrefersReducedMotion();

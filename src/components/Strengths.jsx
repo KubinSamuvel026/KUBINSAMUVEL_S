@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Bolt, Boxes, Gauge, Sparkles } from "lucide-react";
-import { strengths } from "../data/profile";
-import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
-import { Section } from "./Section";
+import { strengths } from "../data/profile.js";
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion.js";
+import { Section } from "./Section.jsx";
 
 const ICONS = [Boxes, Gauge, Bolt, Sparkles];
 

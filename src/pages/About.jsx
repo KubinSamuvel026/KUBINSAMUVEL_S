@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Braces, Database, Layers, Rocket, User } from "lucide-react";
-import { Section } from "../components/Section";
-import { profile, strengths } from "../data/profile";
-import { usePrefersReducedMotion } from "../hooks";
+import { Section } from "../components/Section.jsx";
+import { profile, strengths } from "../data/profile.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 const CARDS = [
   { icon: Database, title: "Backend APIs", desc: "Designing robust REST APIs and scalable backend services." },

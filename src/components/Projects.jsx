@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Search, SlidersHorizontal } from "lucide-react";
 import { useMemo, useState } from "react";
-import { projects as allProjects } from "../data/profile";
-import { attachRippleVars } from "../lib/dom";
-import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
-import { Section } from "./Section";
+import { projects as allProjects } from "../data/profile.js";
+import { attachRippleVars } from "../lib/dom.js";
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion.js";
+import { Section } from "./Section.jsx";
 
 function ProjectCard({ p, index }) {
   const reduced = usePrefersReducedMotion();

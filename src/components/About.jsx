@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Braces, Database, Layers, Rocket } from "lucide-react";
 import profileImg from "../kubin.jpeg";
-import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion";
-import { Section } from "./Section";
+import { usePrefersReducedMotion } from "../hooks/usePrefersReducedMotion.js";
+import { Section } from "./Section.jsx";
 
 const CARDS = [
   {

@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, Award } from "lucide-react";
-import { Section } from "../components/Section";
-import { academics } from "../data/profile";
-import { usePrefersReducedMotion } from "../hooks";
+import { Section } from "../components/Section.jsx";
+import { academics } from "../data/profile.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 const TYPE_META = {
   education: { icon: GraduationCap, label: "Education", color: "var(--accent)" },

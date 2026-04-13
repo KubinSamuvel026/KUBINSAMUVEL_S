@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
-import { Section } from "../components/Section";
-import { certificates } from "../data/profile";
-import { attachRippleVars } from "../lib/dom";
-import { usePrefersReducedMotion } from "../hooks";
+import { Section } from "../components/Section.jsx";
+import { certificates } from "../data/profile.js";
+import { attachRippleVars } from "../lib/dom.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 const CAT_COLORS = {
   Training: "from-[rgba(var(--accent),0.18)] to-[rgba(var(--accent2),0.12)]",

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Phone, Send } from "lucide-react";
 import { useState } from "react";
-import { Section } from "../components/Section";
-import { profile } from "../data/profile";
-import { attachRippleVars } from "../lib/dom";
-import { usePrefersReducedMotion } from "../hooks";
+import { Section } from "../components/Section.jsx";
+import { profile } from "../data/profile.js";
+import { attachRippleVars } from "../lib/dom.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 function Field({ label, children }) {
   return (
