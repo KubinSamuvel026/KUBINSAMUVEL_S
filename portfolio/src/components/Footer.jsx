@@ -1,9 +1,9 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { profile } from "../data/profile";
-import { attachRippleVars } from "../lib/dom";
-import { usePrefersReducedMotion } from "../hooks";
+import { profile } from "../data/profile.js";
+import { attachRippleVars } from "../lib/dom.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 export function Footer() {
   const reduced = usePrefersReducedMotion();

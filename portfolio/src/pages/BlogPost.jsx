@@ -1,8 +1,8 @@
 import { ArrowLeft, BookOpen, Clock } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { blogTopics, blogCategories } from "../data/blog";
-import { usePrefersReducedMotion } from "../hooks";
+import { blogTopics, blogCategories } from "../data/blog.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 function CodeBlock({ code }) {
   return (
@@ -24,8 +24,10 @@ export default function BlogPost() {
   // Related articles (same category, different topic)
   const related = blogTopics.filter(t => t.category === topic.category && t.id !== topic.id).slice(0, 4);
 
-  // Table of contents
-  const toc = topic.content.sections.map(s => s.heading);
+  const sections = topic.content?.sections ?? [];
+  const toc = sections.map(s => s.heading);
+  const intro = topic.content?.intro ?? "";
+  const tips = topic.content?.tips ?? [];
 
   const LEVEL_COLORS = {
     Beginner: "text-green-600 dark:text-green-400 border-green-300/50",
@@ -66,11 +68,11 @@ export default function BlogPost() {
 
             {/* Intro */}
             <div className="glass rounded-3xl p-7 mb-6 prose-blog">
-              <p className="text-base leading-relaxed">{topic.content.intro}</p>
+              <p className="text-base leading-relaxed">{intro}</p>
             </div>
 
             {/* Sections */}
-            {topic.content.sections.map((s, i) => (
+            {sections.map((s, i) => (
               <div key={i} className="glass rounded-3xl p-7 mb-5">
                 <h2 id={s.heading.toLowerCase().replace(/\s+/g, "-")}
                   className="font-[Poppins] text-xl font-bold mb-3">{s.heading}</h2>
@@ -80,7 +82,7 @@ export default function BlogPost() {
             ))}
 
             {/* Tips */}
-            {topic.content.tips?.length > 0 && (
+            {tips.length > 0 && (
               <div className="glass rounded-3xl p-7 border-l-4 border-[rgb(var(--accent2))]">
                 <div className="font-[Poppins] text-base font-bold mb-3 flex items-center gap-2">
                   <span className="text-[rgb(var(--accent2))]">💡</span> Quick Tips

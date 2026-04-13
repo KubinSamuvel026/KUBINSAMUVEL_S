@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Moon, Sun, Menu, X } from "lucide-react";
-import { attachRippleVars } from "../lib/dom";
+import { attachRippleVars } from "../lib/dom.js";
 
 const NAV_ITEMS = [
   { to: "/", label: "Home" },
@@ -9,7 +9,6 @@ const NAV_ITEMS = [
   { to: "/projects", label: "Projects" },
   { to: "/blog", label: "Blog" },
   { to: "/academics", label: "Academics" },
-  { to: "/certificates", label: "Certificates" },
   { to: "/contact", label: "Contact" },
 ];
 

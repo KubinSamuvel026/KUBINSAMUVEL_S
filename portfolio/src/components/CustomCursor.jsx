@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { usePrefersReducedMotion } from "../hooks";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 export function CustomCursor() {
   const reduced = usePrefersReducedMotion();

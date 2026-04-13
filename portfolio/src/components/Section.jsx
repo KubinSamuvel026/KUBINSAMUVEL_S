@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { usePrefersReducedMotion } from "../hooks";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 export function Section({ id, eyebrow, title, children, className = "" }) {
   const reduced = usePrefersReducedMotion();

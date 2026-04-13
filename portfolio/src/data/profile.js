@@ -5,10 +5,10 @@ export const profile = {
   bio: "I'm a Python Full Stack Developer with a passion for building robust backend systems and modern frontend interfaces. Trained at QSpiders, I specialize in clean architecture, RESTful APIs, and delivering practical value through technology.",
   contact: {
     email: "kubinsamuvel@gmail.com",
-    phone: "+91 98765 43210",
+    phone: "+91 6374143168",
     github: "https://github.com/kubinsamuvel",
     linkedin: "https://linkedin.com/in/kubinsamuvel",
-    resumePath: "/resume.pdf",
+    resumePath: "/kubinresume.pdf",
   },
 };
 
@@ -28,98 +28,182 @@ export const skills = {
     { name: "Tailwind CSS", level: 88 },
   ],
 };
-
 export const projects = [
-  {
-    id: "p1",
-    title: "TaskFlow API",
-    category: "Backend",
-    description: "A high-performance REST API for task management with JWT auth, role-based access, and real-time notifications. Handles 50k+ requests/day with sub-200ms response times.",
-    tech: ["Python", "Django REST", "PostgreSQL", "Redis", "Docker"],
-    live: "https://taskflow-api.example.com",
-    github: "https://github.com/kubinsamuvel/taskflow-api",
-    featured: true,
-    createdAt: "2024-01",
-    overview: "TaskFlow API is a production-grade REST API built to power task management applications at scale. Designed with clean architecture principles, it features JWT authentication, granular role-based access control, and Redis-powered caching for blazing-fast response times.",
-    features: ["JWT authentication with refresh tokens", "Role-based access control (Admin, Manager, User)", "Redis caching for 10x performance", "Celery-powered background jobs", "Swagger/OpenAPI documentation", "Dockerized deployment"],
-    challenges: "Designing the permission system to be flexible yet maintainable was the core challenge. Implemented a middleware-based approach that checks permissions at the route level without cluttering business logic.",
-    screenshot: null,
-  },
-  {
-    id: "p2",
-    title: "ShopSphere",
-    category: "Fullstack",
-    description: "Full-stack e-commerce platform with Django backend and React frontend. Features cart, payments via Razorpay, order tracking, and admin dashboard.",
-    tech: ["Django", "React", "PostgreSQL", "Razorpay", "Tailwind"],
-    live: "https://shopsphere.example.com",
-    github: "https://github.com/kubinsamuvel/shopsphere",
-    featured: true,
-    createdAt: "2023-11",
-    overview: "ShopSphere is a complete e-commerce solution built from scratch. The Django backend handles inventory, orders, and payment processing while the React frontend delivers a smooth shopping experience.",
-    features: ["Product catalog with filters & search", "Cart and wishlist functionality", "Razorpay payment integration", "Order tracking system", "Admin dashboard with analytics", "Responsive mobile-first design"],
-    challenges: "Keeping cart state in sync between frontend and backend during payment flows required careful transaction handling and optimistic UI updates.",
-    screenshot: null,
-  },
-  {
-    id: "p3",
-    title: "DataViz Dashboard",
-    category: "Frontend",
-    description: "Interactive analytics dashboard built in React with Chart.js. Real-time data visualization with configurable widgets, dark mode, and CSV export.",
-    tech: ["React", "Chart.js", "Tailwind", "LocalStorage"],
-    live: "https://dataviz.example.com",
-    github: "https://github.com/kubinsamuvel/dataviz-dashboard",
-    featured: true,
-    createdAt: "2024-03",
-    overview: "A configurable analytics dashboard that lets users upload CSV data and instantly visualize it through multiple chart types. Built entirely in React with no backend dependencies.",
-    features: ["Drag-and-drop widget layout", "6 chart types (bar, line, pie, scatter, etc.)", "CSV data import and export", "Persistent layout via LocalStorage", "Dark/light theme toggle", "Responsive grid system"],
-    challenges: "Building a drag-and-drop grid that works well on both desktop and touch devices required a custom implementation with pointer events API.",
-    screenshot: null,
-  },
-  {
-    id: "p4",
-    title: "FlaskAuth Boilerplate",
-    category: "Backend",
-    description: "Production-ready Flask authentication boilerplate with OAuth, email verification, 2FA, and rate limiting. Used as foundation for 5+ client projects.",
-    tech: ["Flask", "SQLAlchemy", "Redis", "OAuth2", "SendGrid"],
-    live: "https://flaskauth.example.com",
-    github: "https://github.com/kubinsamuvel/flask-auth-boilerplate",
-    featured: true,
-    createdAt: "2023-08",
-    overview: "A battle-tested Flask boilerplate that eliminates authentication setup time. Supports social OAuth, email verification, two-factor authentication, and built-in rate limiting to prevent abuse.",
-    features: ["Google/GitHub OAuth integration", "Email verification flow", "TOTP-based 2FA", "Rate limiting per endpoint", "Password reset via email", "Session management with Redis"],
-    challenges: "Implementing TOTP 2FA while keeping the UX smooth required careful state management during the login flow.",
-    screenshot: null,
-  },
-  {
-    id: "p5",
-    title: "BlogEngine CMS",
-    category: "Fullstack",
-    description: "Headless CMS for technical blogs built with Django and React. Supports Markdown, code highlighting, SEO metadata, and a clean editor interface.",
-    tech: ["Django", "React", "PostgreSQL", "Marked.js", "PrismJS"],
-    live: "https://blogengine.example.com",
-    github: "https://github.com/kubinsamuvel/blog-engine",
-    featured: false,
-    createdAt: "2024-02",
-    overview: "A headless CMS tailored for technical writers. Authors write in Markdown with live preview, and the React frontend renders beautifully formatted articles with syntax-highlighted code blocks.",
-    features: ["Markdown editor with live preview", "Syntax highlighting via PrismJS", "SEO metadata management", "Tag and category system", "Draft/publish workflow", "RSS feed generation"],
-    challenges: "Synchronizing the editor scroll position with the preview pane required a custom scroll-sync algorithm.",
-    screenshot: null,
-  },
-  {
-    id: "p6",
-    title: "PyQuery ORM",
-    category: "Backend",
-    description: "Lightweight Python ORM with a fluent API, query builder, and migration tool. Supports PostgreSQL and SQLite with zero dependencies.",
-    tech: ["Python", "PostgreSQL", "SQLite"],
-    live: "https://pypi.org/project/pyquery-orm",
-    github: "https://github.com/kubinsamuvel/pyquery-orm",
-    featured: false,
-    createdAt: "2023-06",
-    overview: "An educational ORM project built to understand how Django's ORM works under the hood. Features a fluent query builder, model definition via class attributes, and a basic migration system.",
-    features: ["Fluent query builder API", "Model definition with metaclasses", "Basic migration system", "PostgreSQL and SQLite adapters", "Connection pooling", "Unit test suite with 95% coverage"],
-    challenges: "Implementing the metaclass-based model definition required deep understanding of Python's data model and descriptor protocol.",
-    screenshot: null,
-  },
+{
+id: "smart-expense-tracker",
+title: "Smart Expense Tracker",
+category: "Fullstack",
+description:
+"A full-stack expense tracking application that helps users manage personal finances, categorize spending, and visualize insights through interactive dashboards.",
+tech: ["Python", "Django", "React", "PostgreSQL"],
+live: "https://smart-expense-tacker.vercel.app/",
+github:
+"https://github.com/KubinSamuvel026/SMART_EXPENSE_TACKER/tree/main/frontend/expense-frontend",
+featured: true,
+createdAt: "2024-03",
+overview:
+"Smart Expense Tracker is a complete financial management application that allows users to track daily spending, categorize transactions, and gain insights through charts and reports. The Django backend provides a scalable REST API while the React frontend delivers a smooth and responsive user experience.",
+features: [
+"Add, edit, and delete expenses instantly",
+"Categorize transactions for better tracking",
+"Interactive charts and analytics dashboard",
+"Secure authentication system",
+"REST API architecture for scalability",
+"Responsive UI optimized for mobile devices"
+],
+challenges:
+"Designing a clean architecture between Django REST APIs and React components while keeping the UI responsive and data synchronized was the main challenge.",
+screenshot: "C:\\Users\\ASUS\\OneDrive\\Desktop\\portfolio\\public\\Saved Pictures\\ats_resume.png"
+},
+
+{
+id: "ats-resume-analyzer",
+title: "ATS Resume Analyzer (AI-based)",
+category: "Fullstack",
+description:
+"AI-powered resume analysis platform that evaluates resumes for ATS compatibility, skill gaps, and role fit using automated insights.",
+tech: ["Django", "React", "REST API", "AI Integration"],
+live: "https://ai-resume-hg5odtdum-kubinsamuve1s-projects.vercel.app/",
+github: "https://github.com/KubinSamuvel026/ai-resume",
+featured: true,
+createdAt: "2024-02",
+overview:
+"The ATS Resume Analyzer helps job seekers improve their resumes by evaluating ATS compatibility and suggesting improvements. It scans uploaded resumes, compares them with job descriptions, and provides AI-generated feedback.",
+features: [
+"Resume keyword analysis",
+"ATS compatibility scoring",
+"Skill gap detection",
+"Improvement suggestions for job roles",
+"Modern React UI for fast feedback",
+"Secure backend with Django APIs"
+],
+challenges:
+"Creating accurate keyword matching between resumes and job descriptions required designing an efficient text-analysis pipeline.",
+screenshot: null
+},
+
+{
+id: "realtime-chat-app",
+title: "Real-Time Chat Application",
+category: "Backend",
+description:
+"A scalable real-time messaging platform using WebSockets with authentication, message persistence, and live communication.",
+tech: ["Django", "WebSocket", "Auth"],
+live: "#",
+github: "#",
+featured: false,
+createdAt: "2023-12",
+overview:
+"This project demonstrates real-time communication using WebSockets. Users can join chat rooms, send instant messages, and maintain conversation history stored in the backend.",
+features: [
+"Instant messaging using WebSockets",
+"Authentication system for users",
+"Chat room creation",
+"Persistent message storage",
+"Scalable backend structure"
+],
+challenges:
+"Maintaining real-time synchronization between multiple connected clients while ensuring secure message handling.",
+screenshot: null
+},
+
+{
+id: "drivewell-driving-school",
+title: "Drivewell Driving School Website",
+category: "Frontend",
+description:
+"A responsive website designed for a driving school to showcase courses, services, pricing, and contact details.",
+tech: ["React", "JavaScript", "HTML5", "CSS3"],
+live: "https://drivewell-five.vercel.app/",
+github: "https://github.com/KubinSamuvel026/Drivewell-",
+featured: false,
+createdAt: "2024-01",
+overview:
+"The Drivewell Driving School website is a modern landing page designed to attract new learners. It highlights available courses, booking options, and contact details in an interactive format.",
+features: [
+"Responsive layout for all devices",
+"Course and service showcase",
+"Interactive navigation and animations",
+"Contact and inquiry section",
+"Clean modern UI design"
+],
+challenges:
+"Designing a visually appealing layout while maintaining performance and responsiveness across mobile devices.",
+screenshot: null
+},
+
+{
+id: "movie-search-app",
+title: "Movie Search Application",
+category: "Frontend",
+description:
+"A fast movie discovery application that allows users to search films, view ratings, and explore movie details using public APIs.",
+tech: ["React", "JavaScript", "API Integration"],
+live: "https://movie-search-application-alpha.vercel.app/",
+github: "https://github.com/KubinSamuvel026/MOVIE_SEARCH_APPLICATION",
+featured: false,
+createdAt: "2023-10",
+overview:
+"This movie search application integrates with external movie APIs to allow users to explore movies in real time. It provides search functionality and detailed movie information.",
+features: [
+"Instant movie search",
+"API integration for movie data",
+"Movie details page",
+"Responsive UI",
+"Clean minimal design"
+],
+challenges:
+"Handling asynchronous API requests efficiently while keeping the interface responsive and preventing unnecessary re-renders.",
+screenshot: null
+},
+
+{
+id: "notes-app",
+title: "Notes Application",
+category: "Frontend",
+description:
+"A lightweight note-taking application that allows users to quickly create, edit, and organize notes.",
+tech: ["React", "JavaScript", "CSS"],
+live: "https://notes-application-jet-omega.vercel.app/",
+github: "https://github.com/KubinSamuvel026/Notes_Application",
+featured: false,
+createdAt: "2023-09",
+overview:
+"The Notes App helps users quickly capture ideas, tasks, and reminders. It provides a minimal interface focused on productivity.",
+features: [
+"Create and edit notes instantly",
+"Delete and organize notes",
+"Responsive design",
+"Fast and lightweight interface"
+],
+challenges:
+"Designing a simple yet intuitive UI that allows quick note creation without unnecessary complexity.",
+screenshot: null
+},
+
+{
+id: "weather-app",
+title: "Weather Forecast Application",
+category: "Frontend",
+description:
+"A real-time weather forecasting app that displays current conditions and forecasts based on location.",
+tech: ["React", "JavaScript", "API Integration"],
+live: "#",
+github: "#",
+featured: false,
+createdAt: "2023-08",
+overview:
+"The Weather App retrieves weather data from an external API and displays current conditions and forecasts in a clean interface.",
+features: [
+"Real-time weather data",
+"Location-based search",
+"Temperature and condition display",
+"Responsive UI for mobile devices"
+],
+challenges:
+"Handling API response delays and displaying fallback states for loading and errors.",
+screenshot: null
+}
 ];
 
 export const strengths = [
@@ -140,40 +224,38 @@ export const strengths = [
     description: "I can take a feature from database schema all the way to polished React UI without handoff delays.",
   },
 ];
-
 export const academics = [
-  {
-    type: "education",
-    institution: "Sri Ramakrishna Institute of Technology",
-    degree: "B.E. in Computer Science and Engineering",
-    year: "2020 – 2024",
-    description: "Studied core computer science subjects including data structures, algorithms, operating systems, database management, and software engineering. Maintained a strong academic record while working on multiple personal projects.",
-    grade: "CGPA: 7.8 / 10",
-  },
-  {
-    type: "education",
-    institution: "Bharathi Matriculation Higher Secondary School",
-    degree: "Higher Secondary (12th Grade) — Computer Science",
-    year: "2019 – 2020",
-    description: "Completed higher secondary education with Computer Science as major. Developed foundational programming skills in C++ and first exposure to web development.",
-    grade: "83%",
-  },
-  {
-    type: "education",
-    institution: "Bharathi Matriculation Higher Secondary School",
-    degree: "Secondary School (10th Grade)",
-    year: "2017 – 2018",
-    description: "Completed secondary education with distinction. Developed strong mathematics and science foundations.",
-    grade: "91%",
-  },
-  {
-    type: "training",
-    institution: "QSpiders — Software Testing & Development Institute",
-    degree: "Python Full Stack Development",
-    year: "2024 (6 months)",
-    description: "Intensive hands-on training in Python Full Stack Development. Covered Python core, Django, Flask, FastAPI, PostgreSQL, React, HTML5, CSS3, Tailwind CSS, REST APIs, and deployment with Docker and Nginx.",
-    grade: "Certified",
-  },
+{
+type: "education",
+degree: "Bachelor of Technology in Information Technology",
+institution: "Hindusthan Institute of Technology, Coimbatore, Tamil Nadu",
+year: "2021 — 2025",
+grade: "CGPA: 7.52 / 10",
+description:
+"Completed a Bachelor of Technology in Information Technology with a strong focus on software development, data structures, web technologies, and database systems. During the program I worked on multiple projects involving Python, React, Django, and full-stack web development."
+},
+
+{
+type: "education",
+degree: "HSC — Computer Science",
+institution: "National Vidyalaya CBSE School, Kumbakonam, Tamil Nadu",
+year: "2020 — 2021",
+grade: "Percentage: 87.6%",
+description:
+"Completed Higher Secondary education with Computer Science as the specialization. Built a strong foundation in programming logic, mathematics, and computer fundamentals which later helped in pursuing software engineering and full-stack development."
+},
+
+{
+type: "training",
+degree: "Python Full Stack Development Program",
+institution: "QSpiders Software Training Institute",
+year: "2025",
+grade: "Certified",
+description:
+"Completed an intensive full-stack development training covering Python core programming, Django, REST APIs, PostgreSQL, React, Tailwind CSS, Git, and deployment workflows. Built multiple real-world projects and strengthened practical software engineering skills."
+}
+,
+
 ];
 
 export const certificates = [

@@ -2,10 +2,10 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Search, BookOpen, ChevronRight } from "lucide-react";
-import { Section } from "../components/Section";
-import { blogCategories, blogTopics } from "../data/blog";
-import { attachRippleVars } from "../lib/dom";
-import { usePrefersReducedMotion } from "../hooks";
+import { Section } from "../components/Section.jsx";
+import { blogCategories, blogTopics } from "../data/blog.js";
+import { attachRippleVars } from "../lib/dom.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 const LEVELS = ["All", "Beginner", "Intermediate", "Advanced"];
 const LEVEL_COLORS = {
@@ -17,7 +17,8 @@ const LEVEL_COLORS = {
 // Group topics by category → level → topics
 function buildTree(topics) {
   const tree = {};
-  for (const t of topics) {
+  for (const t of topics || []) {
+    if (!t?.category || !t?.level) continue;
     if (!tree[t.category]) tree[t.category] = {};
     if (!tree[t.category][t.level]) tree[t.category][t.level] = [];
     tree[t.category][t.level].push(t);
@@ -34,7 +35,8 @@ export default function Blog() {
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return blogTopics.filter((t) => {
+    return (blogTopics || []).filter((t) => {
+      if (!t) return false;
       const catOk = activeCat === "all" || t.category === activeCat;
       const lvlOk = activeLevel === "All" || t.level === activeLevel;
       const qOk = !q || [t.title, t.summary, t.category].join(" ").toLowerCase().includes(q);
@@ -66,6 +68,7 @@ export default function Blog() {
 
               {blogCategories.map((cat) => {
                 const count = blogTopics.filter(t => t.category === cat.id).length;
+                if (count === 0) return null;
                 return (
                   <button
                     key={cat.id}

@@ -1,8 +1,8 @@
 import { ArrowLeft, Calendar, ExternalLink, Github, Layers } from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { projects } from "../data/profile";
-import { usePrefersReducedMotion } from "../hooks";
+import { projects } from "../data/profile.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -80,15 +80,15 @@ export default function ProjectDetail() {
               </div>
 
               {/* Placeholder UI Preview */}
-              <div className="glass rounded-3xl p-7">
+              {/* <div className="glass rounded-3xl p-7">
                 <h2 className="font-[Poppins] text-lg font-bold mb-4">UI Preview</h2>
                 <div className="rounded-2xl bg-gradient-to-br from-[rgba(var(--accent),0.12)] via-[rgba(var(--accent2),0.08)] to-[rgba(var(--accent3),0.10)] border border-[rgb(var(--border))] aspect-video flex items-center justify-center">
                   <div className="text-center">
                     <div className="font-[Poppins] text-2xl font-extrabold grad-text mb-2">{p.title}</div>
-                    <div className="text-sm text-[rgb(var(--muted))]">Screenshot coming soon</div>
+                    <div className="text-sm text-[rgb(var(--muted))]">{p.screenshot }</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Sidebar */}

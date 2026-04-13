@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Briefcase, Award } from "lucide-react";
-import { Section } from "../components/Section";
-import { academics } from "../data/profile";
-import { usePrefersReducedMotion } from "../hooks";
+import { Section } from "../components/Section.jsx";
+import { academics } from "../data/profile.js";
+import { usePrefersReducedMotion } from "../hooks/index.js";
 
 const TYPE_META = {
   education: { icon: GraduationCap, label: "Education", color: "var(--accent)" },
@@ -71,7 +71,7 @@ export default function Academics() {
                 Python Full Stack Development
               </div>
               <div className="text-[rgb(var(--muted))] leading-relaxed mb-5">
-                QSpiders is one of South India's premier software training institutes with a strong track record of placing freshers in top tech companies. The 6-month Python Full Stack program covered everything from core Python to production deployment.
+                QSpiders is one of South India's premier software training institutes with a strong track record of placing freshers in top tech companies. The 12-month Python Full Stack program covered everything from core Python to production deployment.
               </div>
               <div className="flex flex-wrap gap-2">
                 {["Python Core","Django","Flask","FastAPI","PostgreSQL","React","Tailwind CSS","REST APIs","Docker","Git"].map(t => (
@@ -81,9 +81,9 @@ export default function Academics() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Duration", value: "6 Months" },
+                { label: "Duration", value: "12 Months" },
                 { label: "Format", value: "Full-time" },
-                { label: "Projects", value: "5+ Built" },
+                { label: "Projects", value: "2+ Built" },
                 { label: "Status", value: "Certified" },
               ].map(({ label, value }) => (
                 <div key={label} className="rounded-2xl border border-[rgb(var(--border))] bg-white/70 p-4 dark:bg-white/5 text-center">

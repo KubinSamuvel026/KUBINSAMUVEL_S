@@ -56,7 +56,11 @@ export function useTheme() {
     return saved === "light" || saved === "dark" ? saved : "light";
   });
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    if (theme === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
     window.localStorage.setItem("theme", theme);
   }, [theme]);
   return [theme, setTheme];
