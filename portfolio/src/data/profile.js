@@ -8,7 +8,7 @@ export const profile = {
     phone: "+91 6374143168",
     github: "https://github.com/kubinsamuvel",
     linkedin: "https://linkedin.com/in/kubinsamuvel",
-    resumePath: "/kubinresume.pdf",
+    resumePath: "/KubinSamuvel.pdf",
   },
 };
 
