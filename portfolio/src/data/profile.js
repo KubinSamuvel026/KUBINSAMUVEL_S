@@ -29,6 +29,57 @@ export const skills = {
   ],
 };
 export const projects = [
+  {
+    id: "marchfast-ecommerce",
+    title: "MarchFast E-commerce",
+    category: "Fullstack",
+    description:
+      "A professional multi-vendor e-commerce platform featuring secure vendor registration, product management, and automated OTP verification.",
+    tech: ["Python", "Django", "React", "PostgreSQL", "AWS", "Nginx"],
+    live: "https://www.marchfastn.shop/",
+    github: "https://github.com/KubinSamuvel026/March-Fast",
+    featured: true,
+    createdAt: "2024-04",
+    overview:
+      "MarchFast is a scalable e-commerce solution. It features a Django-powered backend deployed on AWS using Nginx and Gunicorn, with a React frontend hosted on Vercel. It includes full CRUD operations for product management and a custom media handling system for product images.",
+    features: [
+      "Secure Vendor Registration with one-time OTP verification",
+      "Full Product CRUD (Create, Read, Update, Delete) functionality",
+      "Robust PostgreSQL database integration",
+      "Production-ready deployment on AWS (EC2/S3)",
+      "Custom SSL configuration for secure API communication",
+      "Mobile-responsive shopping interface"
+    ],
+    challenges:
+      "Configuring the production environment on AWS, specifically setting up Nginx as a reverse proxy and managing SSL certificates for the backend API.",
+    screenshot: null
+  },
+  {
+    id: "ironcore-gym",
+    title: "IRONCORE Gym & Fitness",
+    category: "Frontend",
+    description:
+      "A high-performance fitness platform featuring 3D animations, a BMI calculator, and personalized workout programs.",
+    tech: ["React", "Vite", "Three.js", "Framer Motion", "Tailwind CSS"],
+    live: "https://gym-topaz-eight.vercel.app/",
+    github: "https://github.com/KubinSamuvel026/GYM",
+    featured: true,
+    createdAt: "2024-04",
+    overview:
+      "IRONCORE is a modern fitness website designed to enhance user engagement through interactive elements. It provides tools like a BMI calculator and categorized fitness plans for weight loss and muscle gain.",
+    features: [
+      "Interactive BMI (Body Mass Index) Calculator",
+      "Scroll-based 3D animations using React Three Fiber",
+      "Categorized workout programs (Fat Loss, Strength, etc.)",
+      "Dynamic diet and nutrition tips section",
+      "Smooth page transitions with Framer Motion",
+      "Optimized for 60fps performance on modern browsers"
+    ],
+    challenges:
+      "Managing complex 3D asset loading in a production environment and ensuring smooth performance across different device types.",
+    screenshot: null
+  },
+
 {
 id: "smart-expense-tracker",
 title: "Smart Expense Tracker",
